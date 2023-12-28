@@ -1,0 +1,191 @@
+:root {
+  --clr-primary-softBlue: hsl(215, 51%, 70%);
+  --clr-primary-Cyan: hsl(178, 100%, 50%);
+
+  --clr-neutral-900: hsl(217, 54%, 11%); /*main background*/
+  --clr-netral-800: hsl(216, 50%, 16%); /*card background*/
+  --clr-neutral-700: hsl(215, 32%, 27%); /*line*/
+
+  --clr-neutral-White: hsl(0, 0%, 100%);
+
+  --fs-primary: 1.125rem;
+
+  --ff-primary: "Outfit", sans-serif;
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--ff-primary);
+  background-color: var(--clr-neutral-900);
+  color: var(--clr-primary-softBlue);
+}
+
+main {
+  background-color: var(--clr-netral-800);
+  margin: 0 1.5rem;
+  padding: 1.5rem;
+  max-width: 21.875rem;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0px 1.875rem 1.25rem 1.25rem #0c1729;
+}
+
+.nft-cube img {
+  border-radius: 0.375rem;
+}
+
+.nft-cube img:hover {
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--clr-neutral-White);
+  font-weight: 600;
+}
+
+h2 a {
+  text-decoration: none;
+}
+
+h2 a:hover {
+  color: var(--clr-primary-Cyan);
+}
+
+hr {
+  border: none;
+  border: 1px solid var(--clr-neutral-700);
+}
+
+.value {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ethereum {
+  display: flex;
+  align-items: center;
+  color: var(--clr-primary-Cyan);
+  font-weight: 600;
+  gap: 0.5rem;
+}
+
+.clock {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile img {
+  width: 2.0625rem;
+  height: 2.0625rem;
+}
+
+.profile a {
+  text-decoration: none;
+  color: var(--clr-neutral-White);
+}
+
+.profile a:hover {
+  color: var(--clr-primary-Cyan);
+}
+
+@media (width >= 25rem) {
+  body {
+    font-size: var(--fs-primary);
+  }
+}
