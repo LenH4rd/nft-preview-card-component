@@ -97,6 +97,19 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
+/*Screen Readers*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: hidden;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 body {
   display: flex;
   justify-content: center;
